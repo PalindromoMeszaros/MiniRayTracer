@@ -13,8 +13,9 @@ DIR_OBJS =		./
 
 MLX = 			-I ./mlx -L ./mlx -lmlx -framework OpenGL -framework AppKit
 
-SRC =			srcs/miniRT.c \
-				srcs/key_instructions.c \
+SRC =			miniRT.c \
+				key_instructions.c \
+				final_frees.c
 
 SRCS =			$(addprefix $(DIR_SRCS), $(SRC))
 
@@ -29,7 +30,6 @@ $(NAME) :		$(OBJS)
 
 %.o: %.c
 				@gcc $(FLAGS) -I $(DIR_HEADERS) -c $< -o $@
-				@echo "Compiled "$<" successfully!"
 
 bonus:
 

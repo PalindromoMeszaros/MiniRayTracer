@@ -6,19 +6,23 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 16:11:42 by pablomar          #+#    #+#             */
-/*   Updated: 2020/02/13 14:18:20 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/02/13 15:54:40 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/miniRT.h"
 
-int		main(void)
+int		main(/*int argc, char **argv*/)
 {
 	t_mlx	*mlx;
+	t_scene	*scene;
 	int		count_w;
 	int		count_h;
 
+	
 	if (!(mlx = (t_mlx*)malloc(sizeof(t_mlx))))
+		return (-1);
+	if (!(scene = (t_scene*)malloc(sizeof(t_scene))))
 		return (-1);
 	count_h = -1;
 	mlx->mlx_ptr = mlx_init();
@@ -39,7 +43,6 @@ int		main(void)
 	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img_ptr, 0, 0);
 	mlx_key_hook(mlx->win_ptr, minirt_exit, (void*)0);
 	mlx_loop(mlx->mlx_ptr);
-	free(mlx);
-	//system("leaks a.out");
+	final_frees(mlx, scene);
 	return (0);
 }
