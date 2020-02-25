@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 18:26:24 by pablomar          #+#    #+#             */
-/*   Updated: 2020/02/13 18:28:53 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/02/14 13:42:06 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ typedef struct		s_scene
 
 	//Ambient Lighting
 	float			ambient;
-	int				r_color;
-	int				g_color;
-	int				b_color;
-	char			*rgb_color;
+	int				r_ambient_color;
+	int				g_ambient_color;
+	int				b_ambient_color;
+	int				rgb_ambient_color;
 
 	//Camera
 	float			x_camera;
@@ -50,7 +50,7 @@ typedef struct		s_scene
 	int				r_color;
 	int				g_color;
 	int				b_color;
-	char			*rgb_color;
+	int				rgb_color;
 
 }					t_scene;
 
@@ -64,7 +64,7 @@ typedef struct 		s_sphere
 	unsigned int	r_color;
 	unsigned int	g_color;
 	unsigned int	b_color;
-	char			*rgb;
+	int				rgb;
 
 }					t_sphere;
 
@@ -80,7 +80,7 @@ typedef struct 		s_plane
 	unsigned int	r_color;
 	unsigned int	g_color;
 	unsigned int	b_color;
-	char			*rgb;
+	int				rgb;
 
 }					t_plane;
 
@@ -97,7 +97,7 @@ typedef	struct		s_square
 	unsigned int	r_color;
 	unsigned int	g_color;
 	unsigned int	b_color;
-	char			*rgb;		
+	int				rgb;		
 
 }					t_square;
 
@@ -114,7 +114,7 @@ typedef struct		s_cylinder
 	unsigned int	r_color;
 	unsigned int	g_color;
 	unsigned int	b_color;
-	char			*rgb;
+	int				*rgb;
 
 }					t_cylinder;
 

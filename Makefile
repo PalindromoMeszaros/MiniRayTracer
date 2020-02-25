@@ -15,7 +15,8 @@ MLX = 			-I ./mlx -L ./mlx -lmlx -framework OpenGL -framework AppKit
 
 SRC =			miniRT.c \
 				key_instructions.c \
-				final_frees.c
+				scene_config.c \
+				object_config.c
 
 SRCS =			$(addprefix $(DIR_SRCS), $(SRC))
 
