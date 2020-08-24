@@ -34,10 +34,6 @@ $(NAME) :		$(OBJS)
 
 bonus:
 
-norme:
-				norminette $(DIR_SRCS)
-				norminette $(DIR_HEADERS)
-
 clean:
 				$(RM) $(OBJS)
 
