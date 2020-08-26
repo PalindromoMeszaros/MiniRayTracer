@@ -5,6 +5,10 @@ FLAGS =			-Wall -Wextra -Werror
 
 RM =			rm -rf
 
+LIB_DIR = 		libft
+
+LIB_NAME = 		libft.a
+
 DIR_HEADERS =	./includes/
 
 DIR_SRCS =		./srcs/
@@ -27,6 +31,7 @@ NAME =			miniRT
 all:			$(NAME)
 
 $(NAME) :		$(OBJS)
+				$(MAKE) -C $(LIB_DIR)
 				$(CC) $(FLAGS) -I $(DIR_HEADERS) $(MLX) $(OBJS) -o $(NAME)
 
 %.o: %.c
@@ -36,9 +41,11 @@ bonus:
 
 clean:
 				$(RM) $(OBJS)
+				$(MAKE) -C $(LIB_DIR) clean
 
 fclean:			clean
 				$(RM) $(NAME)
+				$(RM) $(LIB_DIR)/$(LIB_NAME)
 
 re:				fclean all
 

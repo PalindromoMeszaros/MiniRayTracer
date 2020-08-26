@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 18:26:24 by pablomar          #+#    #+#             */
-/*   Updated: 2020/02/14 13:42:06 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/08/25 17:00:32 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,17 @@
 # include <math.h>
 # include "../mlx/mlx.h"
 
-
-//Scene
 typedef struct		s_scene
 {
-	//Resolution
 	unsigned int	x_res;
 	unsigned int	y_res;
 
-	//Ambient Lighting
 	float			ambient;
 	int				r_ambient_color;
 	int				g_ambient_color;
 	int				b_ambient_color;
 	int				rgb_ambient_color;
 
-	//Camera
 	float			x_camera;
 	float			y_camera;
 	float			z_camera;
@@ -42,8 +37,7 @@ typedef struct		s_scene
 	float			z_normal;
 	unsigned int	fov;
 
-	//Light
-	float		   	x_light;
+	float			x_light;
 	float			y_light;
 	float			z_light;
 	float			brightness;
@@ -51,11 +45,9 @@ typedef struct		s_scene
 	int				g_color;
 	int				b_color;
 	int				rgb_color;
-
 }					t_scene;
 
-//Sphere
-typedef struct 		s_sphere
+typedef struct		s_sphere
 {
 	float			x_center;
 	float			y_center;
@@ -65,11 +57,9 @@ typedef struct 		s_sphere
 	unsigned int	g_color;
 	unsigned int	b_color;
 	int				rgb;
-
 }					t_sphere;
 
-//Plane
-typedef struct 		s_plane
+typedef struct		s_plane
 {
 	float			x;
 	float			y;
@@ -81,10 +71,8 @@ typedef struct 		s_plane
 	unsigned int	g_color;
 	unsigned int	b_color;
 	int				rgb;
-
 }					t_plane;
 
-//
 typedef	struct		s_square
 {
 	float			x_center;
@@ -97,8 +85,7 @@ typedef	struct		s_square
 	unsigned int	r_color;
 	unsigned int	g_color;
 	unsigned int	b_color;
-	int				rgb;		
-
+	int				rgb;
 }					t_square;
 
 typedef struct		s_cylinder
@@ -115,10 +102,9 @@ typedef struct		s_cylinder
 	unsigned int	g_color;
 	unsigned int	b_color;
 	int				*rgb;
-
 }					t_cylinder;
 
-typedef struct 		s_triangle
+typedef struct		s_triangle
 {
 	float			x_1;
 	float			y_1;
@@ -129,7 +115,6 @@ typedef struct 		s_triangle
 	float			x_3;
 	float			y_3;
 	float			z_3;
-	
-}					s_triangle;
+}					t_triangle;
 
 #endif
