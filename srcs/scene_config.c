@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 19:17:56 by pablomar          #+#    #+#             */
-/*   Updated: 2020/02/14 18:45:51 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/08/26 14:07:56 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 t_scene     *scene_values(t_scene *scene)
 { 
     //Resolution
-	scene->x_res = 700;
-	scene->y_res = 700;
+	scene->x_res = 1280;
+	scene->y_res = 800;
 
 	//Ambient Lighting
 	scene->ambient = 0.5;

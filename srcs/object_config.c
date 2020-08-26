@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/14 17:40:39 by pablomar          #+#    #+#             */
-/*   Updated: 2020/02/14 18:50:23 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/08/26 14:10:25 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ unsigned int         rgb_to_hex(unsigned int red, unsigned int green, unsigned i
 	return (hex_color);
 }         
 
-t_sphere    *sphere_values(t_sphere *sphere)
+t_sphere            *sphere_values(t_sphere *sphere)
 {
     sphere->x_center = 0;
     sphere->y_center = 0;

@@ -1,7 +1,7 @@
 
 CC =			gcc
 
-FLAGS =			-Wall -Wextra -Werror
+FLAGS =			-Wall -Wextra -Werror -g
 
 RM =			rm -rf
 
@@ -18,7 +18,7 @@ DIR_OBJS =		./
 MLX = 			-I ./mlx -L ./mlx -lmlx -framework OpenGL -framework AppKit
 
 SRC =			miniRT.c \
-				key_instructions.c \
+				exit_frees.c \
 				scene_config.c \
 				object_config.c
 
@@ -45,7 +45,7 @@ clean:
 
 fclean:			clean
 				$(RM) $(NAME)
-				$(RM) $(LIB_DIR)/$(LIB_NAME)
+				$(MAKE) -C $(LIB_DIR) fclean
 
 re:				fclean all
 
