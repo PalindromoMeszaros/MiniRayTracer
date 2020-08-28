@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 18:26:24 by pablomar          #+#    #+#             */
-/*   Updated: 2020/08/25 17:00:32 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/08/28 13:54:04 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ typedef struct		s_cylinder
 	unsigned int	r_color;
 	unsigned int	g_color;
 	unsigned int	b_color;
-	int				*rgb;
+	int				rgb;
 }					t_cylinder;
 
 typedef struct		s_triangle
