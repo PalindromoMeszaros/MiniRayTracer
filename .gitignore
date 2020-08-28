@@ -5,4 +5,4 @@ miniRT
 *.gch
 *.out
 *.bmp
-./miscelanea/cesar_miniRT/
+miscelanea/*
