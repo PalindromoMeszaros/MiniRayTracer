@@ -1,8 +1,0 @@
-.DS_Store
-*.o
-.vscode
-miniRT
-*.gch
-*.out
-*.bmp
-miscelanea/*
