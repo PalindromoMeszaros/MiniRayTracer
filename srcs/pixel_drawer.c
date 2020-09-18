@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 12:34:35 by pablomar          #+#    #+#             */
-/*   Updated: 2020/09/10 12:34:39 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/09/18 15:38:00 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@
 
 void    pixel_drawer(t_scene *scene, t_mlx *mlx)
 {
-    unsigned int	count_w;
-    unsigned int	count_h;
+    unsigned int	count_x;
+    unsigned int	count_y;
 
-    count_h = -1;
-    while (++count_h < scene->y_res)
+    count_y = -1;
+    while (++count_y < scene->y_res)
         {
-            count_w = -1;
-            while (++count_w < scene->x_res)
+            count_x = -1;
+            while (++count_x < scene->x_res)
             {
-                if (count_w % 3)
-                    mlx->data[count_h * scene->x_res + count_w] = scene->rgb_color;
+                if (count_x % 3)
+                    mlx->data[count_y * scene->x_res + count_x] = scene->rgb_color;
                 else
-                    mlx->data[count_h * scene->x_res + count_w] = scene->rgb_color;
+                    mlx->data[count_y * scene->x_res + count_x] = scene->rgb_color;
             }
         }
 }

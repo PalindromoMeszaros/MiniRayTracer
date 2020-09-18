@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 19:17:56 by pablomar          #+#    #+#             */
-/*   Updated: 2020/08/26 14:07:56 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/09/10 16:32:55 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,35 @@
 
 t_scene     *scene_values(t_scene *scene)
 { 
-    //Resolution
+	/*
+    **Resolution
+	*/
 	scene->x_res = 1280;
 	scene->y_res = 800;
 
-	//Ambient Lighting
+	/*
+	**Ambient Lighting
+	*/
 	scene->ambient = 0.5;
 	scene->r_ambient_color = 255;
 	scene->g_ambient_color = 255;
 	scene->b_ambient_color = 255;
 	scene->rgb_ambient_color = rgb_to_hex(scene->r_ambient_color, scene->g_ambient_color, scene->b_ambient_color);
 
-	//Camera
-	scene->x_camera = 0;
-	scene->y_camera = 0;
-	scene->z_camera = 20;
-	scene->x_normal = 0;
-	scene->y_normal = 0;
-	scene->z_normal = 1;
+	/*
+	**Camera
+	*/
+	scene->o_camera.x = 0;
+	scene->o_camera.y = 0;
+	scene->o_camera.z = 20;
+	scene->n_camera.x = 0;
+	scene->n_camera.y = 0;
+	scene->n_camera.z = 1;
 	scene->fov = 60;
 
-	//Light
+	/*
+	**Light
+	*/
    	scene->x_light = 0;
 	scene->y_light = 0;
 	scene->z_light = 20.6;

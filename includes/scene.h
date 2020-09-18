@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 18:26:24 by pablomar          #+#    #+#             */
-/*   Updated: 2020/09/10 12:08:02 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/09/10 16:33:07 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@
 # include <stdlib.h>
 # include <math.h>
 # include "../mlx/mlx.h"
+
+typedef struct		s_vector
+{
+	double			x;
+	double			y;
+	double			z;
+}					t_vector;
 
 typedef struct		s_scene
 {
@@ -29,12 +36,8 @@ typedef struct		s_scene
 	int				b_ambient_color;
 	int				rgb_ambient_color;
 
-	float			x_camera;
-	float			y_camera;
-	float			z_camera;
-	float			x_normal;
-	float			y_normal;
-	float			z_normal;
+	t_vector		o_camera;
+	t_vector		n_camera;
 	unsigned int	fov;
 
 	float			x_light;
@@ -49,10 +52,8 @@ typedef struct		s_scene
 
 typedef struct		s_sphere
 {
-	float			x_center;
-	float			y_center;
-	float			z_center;
-	float			diameter;
+	t_vector		sphere_center;
+	double			diameter;
 	unsigned int	r_color;
 	unsigned int	g_color;
 	unsigned int	b_color;

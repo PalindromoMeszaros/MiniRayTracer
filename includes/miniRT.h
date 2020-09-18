@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 11:47:22 by pablomar          #+#    #+#             */
-/*   Updated: 2020/09/10 13:22:36 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/09/10 16:33:47 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,6 @@ typedef struct		s_mlx
 	void			*win_ptr;  
 }					t_mlx;
 
-typedef struct		s_vector
-{
-	double			x;
-	double			y;
-	double			z;
-}					t_vector;
-
 /*
 ** events
 */
@@ -49,6 +42,8 @@ void			free_operations(t_mlx *mlx);
 */
 int             vector_len(t_vector vector);
 t_vector        normalize_vector(t_vector vector);
+double          distance_two_points(t_vector point1, t_vector point2);
+double          dot_product(t_vector vector1,t_vector vector2);
 
 /*
 ** sphere

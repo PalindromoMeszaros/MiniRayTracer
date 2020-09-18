@@ -21,10 +21,11 @@ MLX = 			-I ./mlx -L ./mlx -lmlx -framework OpenGL -framework AppKit
 
 SRC =			miniRT.c \
 				events.c \
-				scene_config.c \
-				object_config.c \
 				pixel_drawer.c \
-				vector_maths.c
+				config/scene_config.c \
+				config/object_config.c \
+				math/vector_maths.c \
+				geo_math/sphere.c
 
 SRCS =			$(addprefix $(DIR_SRCS), $(SRC))
 
