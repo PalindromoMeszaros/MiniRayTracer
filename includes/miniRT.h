@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 11:47:22 by pablomar          #+#    #+#             */
-/*   Updated: 2020/09/10 16:33:47 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/09/18 15:55:56 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 typedef struct		s_mlx
 {
 	void			*img_ptr; 	
-	int				*data; 		
+	char			*data; 		
 	int				size_l;		
 	int				bpp;		
 	int				endian;		
@@ -63,6 +63,7 @@ t_scene			*scene_values(t_scene *scene);
 /*
 ** render
 */
-void    		pixel_drawer(t_scene *scene, t_mlx *mlx);
+void    		pixel_drawer(t_mlx *mlx, int x, int y, int color);
+void			full_screen_paint(t_scene *scene, t_mlx *mlx);
 
 #endif
