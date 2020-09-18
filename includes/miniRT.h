@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 11:47:22 by pablomar          #+#    #+#             */
-/*   Updated: 2020/09/18 15:55:56 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/09/18 17:47:08 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void			free_operations(t_mlx *mlx);
 ** vector operations
 */
 int             vector_len(t_vector vector);
+t_vector		vector_difference(t_vector vector2, t_vector vector1);
 t_vector        normalize_vector(t_vector vector);
 double          distance_two_points(t_vector point1, t_vector point2);
 double          dot_product(t_vector vector1,t_vector vector2);
@@ -48,7 +49,7 @@ double          dot_product(t_vector vector1,t_vector vector2);
 /*
 ** sphere
 */
-t_sphere		*sphere_values(t_sphere *sphere);
+t_sphere		sphere_values(t_sphere sphere);
 
 /*
 ** color manipulation
@@ -64,6 +65,6 @@ t_scene			*scene_values(t_scene *scene);
 ** render
 */
 void    		pixel_drawer(t_mlx *mlx, int x, int y, int color);
-void			full_screen_paint(t_scene *scene, t_mlx *mlx);
+void			render(t_scene *scene, t_mlx *mlx, t_sphere sphere);
 
 #endif

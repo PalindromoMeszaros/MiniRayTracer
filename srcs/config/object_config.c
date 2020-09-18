@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/14 17:40:39 by pablomar          #+#    #+#             */
-/*   Updated: 2020/09/10 15:41:00 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/09/18 17:10:52 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ unsigned int         rgb_to_hex(unsigned int red, unsigned int green, unsigned i
 	return (hex_color);
 }         
 
-t_sphere            *sphere_values(t_sphere *sphere)
+t_sphere            sphere_values(t_sphere sphere)
 {
-    sphere->sphere_center.x = 300;
-    sphere->sphere_center.y = 200;
-    sphere->sphere_center.z = 250;
-    sphere->diameter = 10;
-    sphere->r_color = 27;
-    sphere->g_color = 99;
-    sphere->b_color = 130;
-    sphere->rgb = rgb_to_hex(sphere->r_color, sphere->g_color, sphere->b_color);
+    sphere.center.x = 640;
+    sphere.center.y = 400;
+    sphere.center.z = 250;
+    sphere.diameter = 10;
+    sphere.r_color = 27;
+    sphere.g_color = 99;
+    sphere.b_color = 130;
+    sphere.rgb = rgb_to_hex(sphere.r_color, sphere.g_color, sphere.b_color);
     return(sphere);
 }
 

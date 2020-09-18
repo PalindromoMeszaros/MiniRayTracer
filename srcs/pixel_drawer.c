@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 12:34:35 by pablomar          #+#    #+#             */
-/*   Updated: 2020/09/18 15:58:15 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/09/18 17:07:11 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void            pixel_drawer(t_mlx *mlx, int x, int y, int color)
 }
 
 /*
-** This is a temporal function for experiment with the mlx
+** This is a temporal function for experimenting with the mlx
 */
-void    full_screen_paint(t_scene *scene, t_mlx *mlx)
+void    render(t_scene *scene, t_mlx *mlx, t_sphere sphere)
 {
     unsigned int	count_x;
     unsigned int	count_y;

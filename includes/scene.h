@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 18:26:24 by pablomar          #+#    #+#             */
-/*   Updated: 2020/09/10 16:33:07 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/09/18 17:10:36 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ typedef struct		s_scene
 
 typedef struct		s_sphere
 {
-	t_vector		sphere_center;
+	t_vector		center;
 	double			diameter;
 	unsigned int	r_color;
 	unsigned int	g_color;

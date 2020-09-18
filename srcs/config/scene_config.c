@@ -6,7 +6,7 @@
 /*   By: pablomar <pablomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 19:17:56 by pablomar          #+#    #+#             */
-/*   Updated: 2020/09/10 16:32:55 by pablomar         ###   ########.fr       */
+/*   Updated: 2020/09/18 16:50:33 by pablomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_scene     *scene_values(t_scene *scene)
 	*/
 	scene->o_camera.x = 0;
 	scene->o_camera.y = 0;
-	scene->o_camera.z = 20;
+	scene->o_camera.z = 0;
 	scene->n_camera.x = 0;
 	scene->n_camera.y = 0;
 	scene->n_camera.z = 1;
